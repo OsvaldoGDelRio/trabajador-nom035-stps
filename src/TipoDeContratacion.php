@@ -7,9 +7,9 @@ class TipoDeContratacion
 {
     private string $_tipoDeContratacion;
 
-    public function __construct(string $tipoDeConstratacion)
+    public function __construct(string $tipoDeConsentratacion)
     {
-        $this->_tipoDeContratacion = $this->setTipoDeContratacion($tipoDeConstratacion);
+        $this->_tipoDeContratacion = $this->setTipoDeContratacion($tipoDeConsentratacion);
     }
 
     public function tipoDeContratacion(): string
@@ -17,16 +17,16 @@ class TipoDeContratacion
         return $this->_tipoDeContratacion;
     }
 
-    private function setTipoDeContratacion(string $tipoDeConstratacion): string
+    private function setTipoDeContratacion(string $tipoDeConsentratacion): string
     {
         if(
-            $tipoDeConstratacion == 'Por obra o proyecto' || 
-            $tipoDeConstratacion == 'Por tiempo determinado (temporal)' ||
-            $tipoDeConstratacion == 'Tiempo indeterminado' || 
-            $tipoDeConstratacion == 'Honorarios'
+            $tipoDeConsentratacion == 'Por obra o proyecto' || 
+            $tipoDeConsentratacion == 'Por tiempo determinado (temporal)' ||
+            $tipoDeConsentratacion == 'Tiempo indeterminado' || 
+            $tipoDeConsentratacion == 'Honorarios'
         )
         {
-            return $tipoDeConstratacion;
+            return $tipoDeConsentratacion;
         }
 
         throw new Exception("Error en Tipo de Contratación", 1);  

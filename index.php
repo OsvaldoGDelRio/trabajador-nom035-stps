@@ -3,6 +3,7 @@ declare(strict_types=1);
 
 require_once __DIR__ . '/vendor/autoload.php';
 
+//Para la clase trabajador
 use 
 src\{
 Trabajador,
@@ -20,6 +21,10 @@ TipoDeJornada,
 RealizaRotacion,
 RangoTiempoEnPuesto,
 RangoExperienciaLaboral};
+
+//Para la clase que convierte datos a texto y numero para base de datos y formularios
+
+use src\ValoresParaBaseDeDatosTrabajador;
 
 /*
 Ejemplo de uso sin Clase factory
@@ -43,5 +48,19 @@ $trabajador = new Trabajador(
 
 );
 
-echo $trabajador->rangoDeEdad();
+echo $trabajador->sexo().'<br>';
 
+/*
+Ejemplo convirtiendo datos de texto a número y viceversa
+*/
+
+
+$valores = new ValoresParaBaseDeDatosTrabajador;
+
+//Convertir de texto a número para la clase Sexo
+
+echo $sexoNumero = $valores->textoANumero('sexo', $trabajador->sexo()).'<br>';
+
+//Conviertiendo el mismo a valor de número a texto
+
+echo $valores->numeroATexto('sexo', $valores->textoANumero('sexo',$trabajador->sexo())).'<br>';

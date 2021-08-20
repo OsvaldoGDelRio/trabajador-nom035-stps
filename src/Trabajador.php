@@ -15,7 +15,7 @@ TipoDePersonal,
 TipoDeJornada,
 RealizaRotacion,
 RangoTiempoEnPuesto,
-RangoExperienciaLaboral}; 
+RangoExperienciaLaboral};
 
 class Trabajador
 {
