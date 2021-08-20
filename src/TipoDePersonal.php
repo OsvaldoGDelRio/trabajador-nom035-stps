@@ -5,28 +5,28 @@ use Exception;
 
 class TipoDePersonal
 {
-    private string $_tipoDeContratacion;
+    private string $_tipoDePersonal;
 
-    public function __construct(string $tipoDeConstratacion)
+    public function __construct(string $tipoDePersonal)
     {
-        $this->_tipoDeContratacion = $this->setTipoDeContratacion($tipoDeConstratacion);
+        $this->_tipoDePersonal = $this->setTipoDePersonal($tipoDePersonal);
     }
 
-    public function tipoDeContratacion(): string
+    public function tipoDePersonal(): string
     {
-        return $this->_tipoDeContratacion;
+        return $this->_tipoDePersonal;
     }
 
-    private function setTipoDeContratacion(string $tipoDeConstratacion): string
+    private function setTipoDePersonal(string $tipoDePersonal): string
     {
         if(
-            strtolower($tipoDeConstratacion) == 'Por obra o proyecto' || 
-            strtolower($tipoDeConstratacion) == 'Por tiempo determinado (temporal)' ||
-            strtolower($tipoDeConstratacion) == 'Tiempo indeterminado' || 
-            strtolower($tipoDeConstratacion) == 'Honorarios'
+            strtolower($tipoDePersonal) == 'Por obra o proyecto' || 
+            strtolower($tipoDePersonal) == 'Por tiempo determinado (temporal)' ||
+            strtolower($tipoDePersonal) == 'Tiempo indeterminado' || 
+            strtolower($tipoDePersonal) == 'Honorarios'
         )
         {
-            return $tipoDeConstratacion;
+            return $tipoDePersonal;
         }
 
         throw new Exception("Error en Tipo de Personal", 1);  

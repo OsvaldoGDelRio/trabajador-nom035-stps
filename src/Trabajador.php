@@ -2,7 +2,7 @@
 namespace src;
 
 use 
-Sexo,
+src\{Sexo,
 Edad,
 RangoDeEdad,
 EstadoCivil,
@@ -15,8 +15,7 @@ TipoDePersonal,
 TipoDeJornada,
 RealizaRotacion,
 RangoTiempoEnPuesto,
-ExperienciaLaboral,
-RangoExperienciaLaboral; 
+RangoExperienciaLaboral}; 
 
 class Trabajador
 {
@@ -33,7 +32,6 @@ class Trabajador
     private $_tipoDeJornada;
     private $_realizaRotacion;
     private $_rangoTiempoEnPuesto;
-    private $_experienciaLaboral; 
     private $_rangoExperienciaLaboral;     
 
     public function __construct
@@ -51,7 +49,6 @@ class Trabajador
         TipoDeJornada $TipoDeJornada,
         RealizaRotacion $RealizaRotacion,
         RangoTiempoEnPuesto $RangoTiempoEnPuesto,
-        ExperienciaLaboral $ExperienciaLaboral,
         RangoExperienciaLaboral $RangoExperienciaLaboral
     )
     {
@@ -68,7 +65,6 @@ class Trabajador
         $this->_tipoDeJornada = $TipoDeJornada;
         $this->_realizaRotacion = $RealizaRotacion;
         $this->_rangoTiempoEnPuesto = $RangoTiempoEnPuesto;
-        $this->_experienciaLaboral = $ExperienciaLaboral;
         $this->_rangoExperienciaLaboral = $RangoExperienciaLaboral;
     }
 
@@ -135,11 +131,6 @@ class Trabajador
     public function rangoTiempoenPuesto(): string
     {
         return $this->_rangoTiempoEnPuesto->rangoTiempoenPuesto();
-    }
-
-    public function experienciaLaboral(): int
-    {
-        return $this->_experienciaLaboral->experienciaLaboral();
     }
 
     public function rangoExperienciaLaboral(): string
