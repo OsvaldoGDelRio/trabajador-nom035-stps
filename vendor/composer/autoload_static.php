@@ -23,12 +23,23 @@ class ComposerStaticInitc898c3f9d73cbd73be1b591f6e9d5c1d
 
     public static $classMap = array (
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
+        'src\\Departamento' => __DIR__ . '/../..' . '/src/Departamento.php',
         'src\\Edad' => __DIR__ . '/../..' . '/src/Edad.php',
+        'src\\EstadoCivil' => __DIR__ . '/../..' . '/src/EstadoCivil.php',
         'src\\Factory' => __DIR__ . '/..' . '/osvaldogdelrio/factory/src/Factory.php',
         'src\\FactoryClassInterface' => __DIR__ . '/..' . '/osvaldogdelrio/factory/src/FactoryClassInterface.php',
         'src\\FactoryInterface' => __DIR__ . '/..' . '/osvaldogdelrio/factory/src/FactoryInterface.php',
+        'src\\NivelDeEstudios' => __DIR__ . '/../..' . '/src/NivelDeEstudios.php',
+        'src\\Ocupacion' => __DIR__ . '/../..' . '/src/Ocupacion.php',
         'src\\RangoDeEdad' => __DIR__ . '/../..' . '/src/RangoDeEdad.php',
+        'src\\RangoExperienciaLaboral' => __DIR__ . '/../..' . '/src/RangoExperienciaLaboral.php',
+        'src\\RangoTiempoEnPuesto' => __DIR__ . '/../..' . '/src/RangoTiempoEnPuesto.php',
+        'src\\RealizaRotacion' => __DIR__ . '/../..' . '/src/RealizaRotacion.php',
         'src\\Sexo' => __DIR__ . '/../..' . '/src/Sexo.php',
+        'src\\TipoDeContratacion' => __DIR__ . '/../..' . '/src/TipoDeContratacion.php',
+        'src\\TipoDeJornada' => __DIR__ . '/../..' . '/src/TipoDeJornada.php',
+        'src\\TipoDePersonal' => __DIR__ . '/../..' . '/src/TipoDePersonal.php',
+        'src\\TipoDePuesto' => __DIR__ . '/../..' . '/src/TipoDePuesto.php',
         'src\\Trabajador' => __DIR__ . '/../..' . '/src/Trabajador.php',
     );
 

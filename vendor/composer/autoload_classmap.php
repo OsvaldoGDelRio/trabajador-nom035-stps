@@ -7,11 +7,22 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'Composer\\InstalledVersions' => $vendorDir . '/composer/InstalledVersions.php',
+    'src\\Departamento' => $baseDir . '/src/Departamento.php',
     'src\\Edad' => $baseDir . '/src/Edad.php',
+    'src\\EstadoCivil' => $baseDir . '/src/EstadoCivil.php',
     'src\\Factory' => $vendorDir . '/osvaldogdelrio/factory/src/Factory.php',
     'src\\FactoryClassInterface' => $vendorDir . '/osvaldogdelrio/factory/src/FactoryClassInterface.php',
     'src\\FactoryInterface' => $vendorDir . '/osvaldogdelrio/factory/src/FactoryInterface.php',
+    'src\\NivelDeEstudios' => $baseDir . '/src/NivelDeEstudios.php',
+    'src\\Ocupacion' => $baseDir . '/src/Ocupacion.php',
     'src\\RangoDeEdad' => $baseDir . '/src/RangoDeEdad.php',
+    'src\\RangoExperienciaLaboral' => $baseDir . '/src/RangoExperienciaLaboral.php',
+    'src\\RangoTiempoEnPuesto' => $baseDir . '/src/RangoTiempoEnPuesto.php',
+    'src\\RealizaRotacion' => $baseDir . '/src/RealizaRotacion.php',
     'src\\Sexo' => $baseDir . '/src/Sexo.php',
+    'src\\TipoDeContratacion' => $baseDir . '/src/TipoDeContratacion.php',
+    'src\\TipoDeJornada' => $baseDir . '/src/TipoDeJornada.php',
+    'src\\TipoDePersonal' => $baseDir . '/src/TipoDePersonal.php',
+    'src\\TipoDePuesto' => $baseDir . '/src/TipoDePuesto.php',
     'src\\Trabajador' => $baseDir . '/src/Trabajador.php',
 );

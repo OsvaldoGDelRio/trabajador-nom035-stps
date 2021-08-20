@@ -20,10 +20,10 @@ class TipoDePuesto
     private function setTipoDePuesto(string $tipoDePuesto): string
     {
         if(
-            strtolower($tipoDePuesto) == 'Operativo' || 
-            strtolower($tipoDePuesto) == 'Profesional o técnico' ||
-            strtolower($tipoDePuesto) == 'Supervisor' || 
-            strtolower($tipoDePuesto) == 'Gerente'
+            $tipoDePuesto == 'Operativo' || 
+            $tipoDePuesto == 'Profesional o técnico' ||
+            $tipoDePuesto == 'Supervisor' || 
+            $tipoDePuesto == 'Gerente'
         )
         {
             return $tipoDePuesto;

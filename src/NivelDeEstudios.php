@@ -20,14 +20,14 @@ class NivelDeEstudios
     private function setNivelDeEstudios(string $nivelDeEstudios): string
     {
         if(
-            strtolower($nivelDeEstudios) == 'Sin información' || 
-            strtolower($nivelDeEstudios) == 'Primaria' ||
-            strtolower($nivelDeEstudios) == 'Secundaria' || 
-            strtolower($nivelDeEstudios) == 'Bachillerato' ||
-            strtolower($nivelDeEstudios) == 'Técnico superior' ||
-            strtolower($nivelDeEstudios) == 'Licenciatura' ||
-            strtolower($nivelDeEstudios) == 'Maestría' ||
-            strtolower($nivelDeEstudios) == 'Doctorado'
+            $nivelDeEstudios == 'Sin información' || 
+            $nivelDeEstudios == 'Primaria' ||
+            $nivelDeEstudios == 'Secundaria' || 
+            $nivelDeEstudios == 'Bachillerato' ||
+            $nivelDeEstudios == 'Técnico superior' ||
+            $nivelDeEstudios == 'Licenciatura' ||
+            $nivelDeEstudios == 'Maestría' ||
+            $nivelDeEstudios == 'Doctorado'
         )
         {
             return $nivelDeEstudios;

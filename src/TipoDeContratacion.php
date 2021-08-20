@@ -20,10 +20,10 @@ class TipoDeContratacion
     private function setTipoDeContratacion(string $tipoDeConstratacion): string
     {
         if(
-            strtolower($tipoDeConstratacion) == 'Por obra o proyecto' || 
-            strtolower($tipoDeConstratacion) == 'Por tiempo determinado (temporal)' ||
-            strtolower($tipoDeConstratacion) == 'Tiempo indeterminado' || 
-            strtolower($tipoDeConstratacion) == 'Honorarios'
+            $tipoDeConstratacion == 'Por obra o proyecto' || 
+            $tipoDeConstratacion == 'Por tiempo determinado (temporal)' ||
+            $tipoDeConstratacion == 'Tiempo indeterminado' || 
+            $tipoDeConstratacion == 'Honorarios'
         )
         {
             return $tipoDeConstratacion;

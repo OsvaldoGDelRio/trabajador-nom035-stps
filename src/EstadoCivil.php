@@ -20,11 +20,11 @@ class EstadoCivil
     private function setEstadoCivil(string $estadoCivil): string
     {
         if(
-            strtolower($estadoCivil) == 'Casado' || 
-            strtolower($estadoCivil) == 'Soltero' ||
-            strtolower($estadoCivil) == 'Unión libre' || 
-            strtolower($estadoCivil) == 'Divorciado' ||
-            strtolower($estadoCivil) == 'Vuido'
+            $estadoCivil == 'Casado' || 
+            $estadoCivil == 'Soltero' ||
+            $estadoCivil == 'Unión libre' || 
+            $estadoCivil == 'Divorciado' ||
+            $estadoCivil == 'Vuido'
         )
         {
             return $estadoCivil;

@@ -20,9 +20,9 @@ class TipoDeJornada
     private function setTipoDeJornada(string $tipoDeJornada): string
     {
         if(
-            strtolower($tipoDeJornada) == 'Fijo nocturno (entre las 20:00 y 6:00 hrs)' || 
-            strtolower($tipoDeJornada) == 'Fijo diurno (entre las 6:00 y 20:00 hrs' ||
-            strtolower($tipoDeJornada) == 'Fijo mixto (combinación de nocturno y diurno)'
+            $tipoDeJornada == 'Fijo nocturno (entre las 20:00 y 6:00 hrs)' || 
+            $tipoDeJornada == 'Fijo diurno (entre las 6:00 y 20:00 hrs' ||
+            $tipoDeJornada == 'Fijo mixto (combinación de nocturno y diurno)'
         )
         {
             return $tipoDeJornada;

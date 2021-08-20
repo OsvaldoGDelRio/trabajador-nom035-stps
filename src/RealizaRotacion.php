@@ -19,7 +19,7 @@ class RealizaRotacion
 
     private function setRealizaRotacion(string $realizaRotacion): string
     {
-        if(strtolower($realizaRotacion) == 'Sí' || strtolower($realizaRotacion) == 'No')
+        if($realizaRotacion == 'Sí' || $realizaRotacion == 'No')
         {
             return $realizaRotacion;
         }

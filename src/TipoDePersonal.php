@@ -20,10 +20,9 @@ class TipoDePersonal
     private function setTipoDePersonal(string $tipoDePersonal): string
     {
         if(
-            strtolower($tipoDePersonal) == 'Por obra o proyecto' || 
-            strtolower($tipoDePersonal) == 'Por tiempo determinado (temporal)' ||
-            strtolower($tipoDePersonal) == 'Tiempo indeterminado' || 
-            strtolower($tipoDePersonal) == 'Honorarios'
+            $tipoDePersonal == 'Sindicalizado' || 
+            $tipoDePersonal == 'Confianza' ||
+            $tipoDePersonal == 'Ninguno'
         )
         {
             return $tipoDePersonal;
