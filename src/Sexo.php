@@ -19,7 +19,7 @@ class Sexo
 
     private function setSexo(string $sexo): string
     {
-        if(strtolower($sexo) == 'hombre' || strtolower($sexo) == 'mujer')
+        if(strtolower($sexo) == 'Hombre' || strtolower($sexo) == 'Mujer')
         {
             return $sexo;
         }

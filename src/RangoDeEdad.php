@@ -1,9 +1,7 @@
 <?php
 namespace src;
 
-use Edad;
-
-use Exception;
+use src\Edad;
 
 class RangoDeEdad
 {

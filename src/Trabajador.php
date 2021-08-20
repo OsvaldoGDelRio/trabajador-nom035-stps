@@ -14,7 +14,6 @@ TipoDeContratacion,
 TipoDePersonal,
 TipoDeJornada,
 RealizaRotacion,
-TiempoEnPuesto,
 RangoTiempoEnPuesto,
 ExperienciaLaboral,
 RangoExperienciaLaboral; 
@@ -33,7 +32,6 @@ class Trabajador
     private $_tipoDePersonal;
     private $_tipoDeJornada;
     private $_realizaRotacion;
-    private $_tiempoEnPuesto;
     private $_rangoTiempoEnPuesto;
     private $_experienciaLaboral; 
     private $_rangoExperienciaLaboral;     
@@ -52,7 +50,6 @@ class Trabajador
         TipoDePersonal $TipoDePersonal,
         TipoDeJornada $TipoDeJornada,
         RealizaRotacion $RealizaRotacion,
-        TiempoEnPuesto $TiempoEnPuesto,
         RangoTiempoEnPuesto $RangoTiempoEnPuesto,
         ExperienciaLaboral $ExperienciaLaboral,
         RangoExperienciaLaboral $RangoExperienciaLaboral
@@ -70,7 +67,6 @@ class Trabajador
         $this->_tipoDePersonal = $TipoDePersonal;
         $this->_tipoDeJornada = $TipoDeJornada;
         $this->_realizaRotacion = $RealizaRotacion;
-        $this->_tiempoEnPuesto = $TiempoEnPuesto;
         $this->_rangoTiempoEnPuesto = $RangoTiempoEnPuesto;
         $this->_experienciaLaboral = $ExperienciaLaboral;
         $this->_rangoExperienciaLaboral = $RangoExperienciaLaboral;
@@ -134,11 +130,6 @@ class Trabajador
     public function realizaRotacion(): string
     {
         return $this->_realizaRotacion->realizaRotacion();
-    }
-
-    public function tiempoEnPuesto(): int
-    {
-        return $this->_tiempoEnPuesto->tiempoEnPuesto();
     }
 
     public function rangoTiempoenPuesto(): string
