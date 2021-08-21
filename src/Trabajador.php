@@ -138,5 +138,4 @@ class Trabajador
     {
         return $this->_rangoExperienciaLaboral->rangoExperienciaLaboral();
     }
-
 }

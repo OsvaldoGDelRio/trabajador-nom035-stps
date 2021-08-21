@@ -19,6 +19,8 @@ class RangoDeEdad
 
     private function setRangoDeEdad(int $edad): string
     {
+        $rango = '';
+        
         if($edad >= 15 && $edad <= 19)
         {
             $rango = "15-19";
