@@ -4,25 +4,23 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b96155bc0c1f5016ff0b0a5c5ab30d0f",
+    "content-hash": "cc9673d72fd8ec0bda6f825bfd8b64d1",
     "packages": [
         {
             "name": "osvaldogdelrio/factory",
-            "version": "1.0.0.1",
+            "version": "dev-main",
             "source": {
                 "type": "git",
                 "url": "https://github.com/OsvaldoGDelRio/factory.git",
-                "reference": "c4ff79e1d0ed8fb3531f5b050d3427fbe57f92a1"
+                "reference": "c56fec704cba73f168635d31cd94281e459e304b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/OsvaldoGDelRio/factory/zipball/c4ff79e1d0ed8fb3531f5b050d3427fbe57f92a1",
-                "reference": "c4ff79e1d0ed8fb3531f5b050d3427fbe57f92a1",
+                "url": "https://api.github.com/repos/OsvaldoGDelRio/factory/zipball/c56fec704cba73f168635d31cd94281e459e304b",
+                "reference": "c56fec704cba73f168635d31cd94281e459e304b",
                 "shasum": ""
             },
-            "require": {
-                "composer-runtime-api": "^2.0"
-            },
+            "default-branch": true,
             "type": "library",
             "autoload": {
                 "psr-4": {
@@ -42,20 +40,20 @@
             "description": "Clase para crear otros objetos/clases con el patr\u0000n Factory",
             "support": {
                 "issues": "https://github.com/OsvaldoGDelRio/factory/issues",
-                "source": "https://github.com/OsvaldoGDelRio/factory/tree/1.0.0.1"
+                "source": "https://github.com/OsvaldoGDelRio/factory/tree/main"
             },
-            "time": "2021-08-06T17:16:14+00:00"
+            "time": "2021-08-21T15:39:20+00:00"
         }
     ],
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "osvaldogdelrio/factory": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
-    "platform": {
-        "composer-runtime-api": "^2.0"
-    },
+    "platform": [],
     "platform-dev": [],
     "plugin-api-version": "2.1.0"
 }

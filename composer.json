@@ -15,6 +15,6 @@
         }
     },
     "require": {
-        "osvaldogdelrio/factory": "^1.0.0.1"
+        "osvaldogdelrio/factory": "dev-main"
     }
 }

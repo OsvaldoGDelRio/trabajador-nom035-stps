@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInitc898c3f9d73cbd73be1b591f6e9d5c1d
+class ComposerStaticInit806e07cdf43c7c81033d8908d20b95ac
 {
     public static $prefixLengthsPsr4 = array (
         's' => 
@@ -17,7 +17,6 @@ class ComposerStaticInitc898c3f9d73cbd73be1b591f6e9d5c1d
         'src\\' => 
         array (
             0 => __DIR__ . '/../..' . '/src',
-            1 => __DIR__ . '/..' . '/osvaldogdelrio/factory/src',
         ),
     );
 
@@ -28,9 +27,9 @@ class ComposerStaticInitc898c3f9d73cbd73be1b591f6e9d5c1d
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInitc898c3f9d73cbd73be1b591f6e9d5c1d::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInitc898c3f9d73cbd73be1b591f6e9d5c1d::$prefixDirsPsr4;
-            $loader->classMap = ComposerStaticInitc898c3f9d73cbd73be1b591f6e9d5c1d::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit806e07cdf43c7c81033d8908d20b95ac::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit806e07cdf43c7c81033d8908d20b95ac::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInit806e07cdf43c7c81033d8908d20b95ac::$classMap;
 
         }, null, ClassLoader::class);
     }

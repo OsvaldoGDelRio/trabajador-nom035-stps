@@ -2,23 +2,21 @@
     "packages": [
         {
             "name": "osvaldogdelrio/factory",
-            "version": "1.0.0.1",
-            "version_normalized": "1.0.0.1",
+            "version": "dev-main",
+            "version_normalized": "dev-main",
             "source": {
                 "type": "git",
                 "url": "https://github.com/OsvaldoGDelRio/factory.git",
-                "reference": "c4ff79e1d0ed8fb3531f5b050d3427fbe57f92a1"
+                "reference": "c56fec704cba73f168635d31cd94281e459e304b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/OsvaldoGDelRio/factory/zipball/c4ff79e1d0ed8fb3531f5b050d3427fbe57f92a1",
-                "reference": "c4ff79e1d0ed8fb3531f5b050d3427fbe57f92a1",
+                "url": "https://api.github.com/repos/OsvaldoGDelRio/factory/zipball/c56fec704cba73f168635d31cd94281e459e304b",
+                "reference": "c56fec704cba73f168635d31cd94281e459e304b",
                 "shasum": ""
             },
-            "require": {
-                "composer-runtime-api": "^2.0"
-            },
-            "time": "2021-08-06T17:16:14+00:00",
+            "time": "2021-08-21T15:39:20+00:00",
+            "default-branch": true,
             "type": "library",
             "installation-source": "dist",
             "autoload": {
@@ -39,7 +37,7 @@
             "description": "Clase para crear otros objetos/clases con el patr\u0000n Factory",
             "support": {
                 "issues": "https://github.com/OsvaldoGDelRio/factory/issues",
-                "source": "https://github.com/OsvaldoGDelRio/factory/tree/1.0.0.1"
+                "source": "https://github.com/OsvaldoGDelRio/factory/tree/main"
             },
             "install-path": "../osvaldogdelrio/factory"
         }
