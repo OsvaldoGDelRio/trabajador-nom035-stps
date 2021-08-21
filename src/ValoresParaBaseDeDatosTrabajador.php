@@ -23,8 +23,7 @@ class ValoresParaBaseDeDatosTrabajador
         'tipoDeJornada',
         'realizaRotacion',
         'rangoTiempoEnPuesto',
-        'rangoExperienciaLaboral'
-
+        'rangoExperienciaLaboral',
     );
 
     public $sexo = 

@@ -43,6 +43,7 @@ class ComposerStaticInitc898c3f9d73cbd73be1b591f6e9d5c1d
         'src\\TipoDePersonal' => __DIR__ . '/../..' . '/src/TipoDePersonal.php',
         'src\\TipoDePuesto' => __DIR__ . '/../..' . '/src/TipoDePuesto.php',
         'src\\Trabajador' => __DIR__ . '/../..' . '/src/Trabajador.php',
+        'src\\TrabajadorConId' => __DIR__ . '/../..' . '/src/TrabajadorConId.php',
         'src\\ValoresParaBaseDeDatosTrabajador' => __DIR__ . '/../..' . '/src/ValoresParaBaseDeDatosTrabajador.php',
     );
 

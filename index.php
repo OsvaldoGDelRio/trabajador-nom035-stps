@@ -35,6 +35,11 @@ use src\ValoresParaBaseDeDatosTrabajador;
 
 use src\CrearTrabajador;
 
+//Para crear una clase de Trabajador que contenga ID
+
+use src\TrabajadorConId;
+use src\IdDeTrabajador;
+
 /*
 Ejemplo de uso sin Clase factory
 */
@@ -134,6 +139,20 @@ $datos = array(
 );
 
 $nuevoTrabajador = new CrearTrabajador;
+$nuevoTrabajador = $nuevoTrabajador->crear( (array) $valores->cambiarTodosDeNumeroATexto( (object) $datos) );
 echo '<pre>';
-var_dump($nuevoTrabajador->crear( (array) $valores->cambiarTodosDeNumeroATexto( (object) $datos) ) );
+var_dump($nuevoTrabajador);
 echo '</pre>';
+
+/*
+Para Trabajador con ID
+*/
+echo '<h1>Creando la clase trabajador con ID</h1>';
+
+$idDeTrabajador = new IdDeTrabajador('ASD123');
+echo '<pre>';
+$trabajadorConId = new TrabajadorConId($trabajador,$idDeTrabajador);
+
+var_dump($trabajadorConId);
+echo '</pre>';
+

@@ -27,5 +27,6 @@ return array(
     'src\\TipoDePersonal' => $baseDir . '/src/TipoDePersonal.php',
     'src\\TipoDePuesto' => $baseDir . '/src/TipoDePuesto.php',
     'src\\Trabajador' => $baseDir . '/src/Trabajador.php',
+    'src\\TrabajadorConId' => $baseDir . '/src/TrabajadorConId.php',
     'src\\ValoresParaBaseDeDatosTrabajador' => $baseDir . '/src/ValoresParaBaseDeDatosTrabajador.php',
 );
