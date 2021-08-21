@@ -11,10 +11,12 @@ class ValoresParaBaseDeDatosTrabajador
     public $atributos = 
     array(
         'sexo',
+        'edad',
         'rangoDeEdad',
         'estadoCivil',
         'nivelDeEstudios',
-        'nivelDeEstudios',
+        'ocupacion',
+        'departamento',
         'tipoDePuesto',
         'tipoDeContratacion',
         'tipoDePersonal',
@@ -134,7 +136,15 @@ class ValoresParaBaseDeDatosTrabajador
 
         foreach ($this->atributos as $atributo)
         {
-            $datos->{$atributo} = $this->textoANumero($atributo, $Trabajador->{$atributo}());
+            if($atributo == 'ocupacion' || $atributo == 'departamento' || $atributo == 'edad')
+            {
+                $datos->{$atributo} = $Trabajador->{$atributo}();
+            }
+            else
+            {
+                $datos->{$atributo} = $this->textoANumero($atributo, $Trabajador->{$atributo}());
+            }
+            
         }
 
         return $datos;
@@ -146,7 +156,14 @@ class ValoresParaBaseDeDatosTrabajador
 
         foreach ($datosDeTrabajador as $key => $valor)
         {
-            $datos->{$key} = $this->numeroATexto($key, $valor);
+            if($key == 'ocupacion' || $key == 'departamento' || $key == 'edad')
+            {
+                $datos->{$key} = $valor;
+            }
+            else
+            {
+                $datos->{$key} = $this->numeroATexto($key, $valor);
+            }
         }
 
         return $datos;

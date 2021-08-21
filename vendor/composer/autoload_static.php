@@ -23,12 +23,14 @@ class ComposerStaticInitc898c3f9d73cbd73be1b591f6e9d5c1d
 
     public static $classMap = array (
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
+        'src\\CrearTrabajador' => __DIR__ . '/../..' . '/src/CrearTrabajador.php',
         'src\\Departamento' => __DIR__ . '/../..' . '/src/Departamento.php',
         'src\\Edad' => __DIR__ . '/../..' . '/src/Edad.php',
         'src\\EstadoCivil' => __DIR__ . '/../..' . '/src/EstadoCivil.php',
         'src\\Factory' => __DIR__ . '/..' . '/osvaldogdelrio/factory/src/Factory.php',
         'src\\FactoryClassInterface' => __DIR__ . '/..' . '/osvaldogdelrio/factory/src/FactoryClassInterface.php',
         'src\\FactoryInterface' => __DIR__ . '/..' . '/osvaldogdelrio/factory/src/FactoryInterface.php',
+        'src\\IdDeTrabajador' => __DIR__ . '/../..' . '/src/IdDeTrabajador.php',
         'src\\NivelDeEstudios' => __DIR__ . '/../..' . '/src/NivelDeEstudios.php',
         'src\\Ocupacion' => __DIR__ . '/../..' . '/src/Ocupacion.php',
         'src\\RangoDeEdad' => __DIR__ . '/../..' . '/src/RangoDeEdad.php',
@@ -41,6 +43,7 @@ class ComposerStaticInitc898c3f9d73cbd73be1b591f6e9d5c1d
         'src\\TipoDePersonal' => __DIR__ . '/../..' . '/src/TipoDePersonal.php',
         'src\\TipoDePuesto' => __DIR__ . '/../..' . '/src/TipoDePuesto.php',
         'src\\Trabajador' => __DIR__ . '/../..' . '/src/Trabajador.php',
+        'src\\ValoresParaBaseDeDatosTrabajador' => __DIR__ . '/../..' . '/src/ValoresParaBaseDeDatosTrabajador.php',
     );
 
     public static function getInitializer(ClassLoader $loader)

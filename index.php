@@ -1,4 +1,9 @@
 <?php
+
+/*
+Ejemplos de uso
+*/
+
 declare(strict_types=1);
 
 require_once __DIR__ . '/vendor/autoload.php';
@@ -26,9 +31,15 @@ RangoExperienciaLaboral};
 
 use src\ValoresParaBaseDeDatosTrabajador;
 
+//Para crear la clase usando Factory
+
+use src\CrearTrabajador;
+
 /*
 Ejemplo de uso sin Clase factory
 */
+
+echo '<h1>Creando la clase sin Factory:</h1>';
 
 $trabajador = new Trabajador(
     new Sexo('Hombre'),
@@ -47,7 +58,6 @@ $trabajador = new Trabajador(
     new RangoExperienciaLaboral('Menos de 6 meses')
 
 );
-echo '<h1>Datos de la clase:</h1>';
 
 echo '<p>';
 echo $trabajador->sexo().'<br>';
@@ -97,4 +107,33 @@ echo '<pre>';
 print_r($valores->cambiarTodosDeNumeroATexto(
     $valores->cambiarTodosDeTextoANumero($trabajador)  
 ));
+echo '</pre>';
+
+/*
+Creando la clase con Factory dado un array con valores de número y texto
+*/
+echo '<h1>Creando la clase trabajador desde Factory usando un array con valores de número</h1>';
+
+//Datos pueden venir de Base de Datos o Formulario
+
+$datos = array(
+    "sexo" => 1,
+    "edad" => 18,
+    "rangoDeEdad" => 1,
+    "estadoCivil" => 2,
+    "nivelDeEstudios" => 2,
+    "ocupacion" => "Ayudante",
+    "departamento" => "Mantenimiento",
+    "tipoDePuesto" => 1,
+    "tipoDeContratacion" => 3,
+    "tipoDePersonal" => 3,
+    "tipoDeJornada" => 3,
+    "realizaRotacion" => 1,
+    "rangoTiempoEnPuesto" => 1,
+    "rangoExperienciaLaboral" => 1,
+);
+
+$nuevoTrabajador = new CrearTrabajador;
+echo '<pre>';
+var_dump($nuevoTrabajador->crear( (array) $valores->cambiarTodosDeNumeroATexto( (object) $datos) ) );
 echo '</pre>';
