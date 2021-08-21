@@ -47,14 +47,30 @@ $trabajador = new Trabajador(
     new RangoExperienciaLaboral('Menos de 6 meses')
 
 );
+echo '<h1>Datos de la clase:</h1>';
 
+echo '<p>';
 echo $trabajador->sexo().'<br>';
+echo $trabajador->edad().'<br>';
+echo $trabajador->rangoDeEdad().'<br>';
+echo $trabajador->estadoCivil().'<br>';
+echo $trabajador->nivelDeEstudios().'<br>';
+echo $trabajador->ocupacion().'<br>';
+echo $trabajador->departamento().'<br>';
+echo $trabajador->tipoDePuesto().'<br>';
+echo $trabajador->tipoDeContratacion().'<br>';
+echo $trabajador->tipoDePersonal().'<br>';
+echo $trabajador->tipoDeJornada().'<br>';
+echo $trabajador->realizaRotacion().'<br>';
+echo $trabajador->rangoTiempoenPuesto().'<br>';
+echo $trabajador->rangoExperienciaLaboral().'<br>';
+echo '</p>';
 
 /*
 Ejemplo convirtiendo datos de texto a número y viceversa
 */
 
-
+echo '<h1>Coviertiendo valores</h1>';
 $valores = new ValoresParaBaseDeDatosTrabajador;
 
 //Convertir de texto a número para la clase Sexo
@@ -64,3 +80,21 @@ echo $sexoNumero = $valores->textoANumero('sexo', $trabajador->sexo()).'<br>';
 //Conviertiendo el mismo a valor de número a texto
 
 echo $valores->numeroATexto('sexo', $valores->textoANumero('sexo',$trabajador->sexo())).'<br>';
+
+/*
+Para cambiar todos los valores de texto a número
+*/
+echo '<h1>Coviertiendo todos los valores de texto a número</h1>';
+echo '<pre>';
+print_r($valores->cambiarTodosDeTextoANumero($trabajador));
+echo '</pre>';
+
+/*
+Para cambiar todos los valores de número a texto
+*/
+echo '<h1>Coviertiendo todos los valores de número a texto</h1>';
+echo '<pre>';
+print_r($valores->cambiarTodosDeNumeroATexto(
+    $valores->cambiarTodosDeTextoANumero($trabajador)  
+));
+echo '</pre>';

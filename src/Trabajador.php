@@ -2,7 +2,8 @@
 namespace src;
 
 use 
-src\{Sexo,
+src\
+{Sexo,
 Edad,
 RangoDeEdad,
 EstadoCivil,

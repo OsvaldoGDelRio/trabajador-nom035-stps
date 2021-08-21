@@ -2,9 +2,29 @@
 namespace src;
 
 use Exception;
+use stdClass;
+
+use src\Trabajador;
 
 class ValoresParaBaseDeDatosTrabajador
 {
+    public $atributos = 
+    array(
+        'sexo',
+        'rangoDeEdad',
+        'estadoCivil',
+        'nivelDeEstudios',
+        'nivelDeEstudios',
+        'tipoDePuesto',
+        'tipoDeContratacion',
+        'tipoDePersonal',
+        'tipoDeJornada',
+        'realizaRotacion',
+        'rangoTiempoEnPuesto',
+        'rangoExperienciaLaboral'
+
+    );
+
     public $sexo = 
     array(
         'Hombre' => 1,
@@ -96,7 +116,7 @@ class ValoresParaBaseDeDatosTrabajador
         '25 años o más' => 8
     ); 
 
-    public $rangoEnExperienciaLaboral = 
+    public $rangoExperienciaLaboral = 
     array(
         'Menos de 6 meses' => 1,
         'Entre 6 meses y 1 año' => 2,
@@ -106,7 +126,31 @@ class ValoresParaBaseDeDatosTrabajador
         'Entre 15 a 19 años' => 6,
         'Entre 20 a 24 años' => 7,
         '25 años o más' => 8
-    ); 
+    );
+    
+    public function cambiarTodosDeTextoANumero(Trabajador $Trabajador): object
+    {
+        $datos = new stdClass;
+
+        foreach ($this->atributos as $atributo)
+        {
+            $datos->{$atributo} = $this->textoANumero($atributo, $Trabajador->{$atributo}());
+        }
+
+        return $datos;
+    }
+
+    public function cambiarTodosDeNumeroATexto(object $datosDeTrabajador): object
+    {
+        $datos = new stdClass;
+
+        foreach ($datosDeTrabajador as $key => $valor)
+        {
+            $datos->{$key} = $this->numeroATexto($key, $valor);
+        }
+
+        return $datos;
+    }
     
     public function textoANumero(string $atributo, string $valor): int
     {
