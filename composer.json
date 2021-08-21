@@ -15,7 +15,6 @@
         }
     },
     "require": {
-        "osvaldogdelrio/factory": "^1.0.0.1", 
-        "composer-runtime-api": "^2.0"
+        "osvaldogdelrio/factory": "^1.0.0.1"
     }
 }
