@@ -6,6 +6,20 @@ use src\Edad;
 class RangoDeEdad
 {
     private string $_rangoDeEdad;
+    private $_rangos = array(
+        '15' => 19,
+        '20' => 24,
+        '25' => 29,
+        '30' => 34,
+        '35' => 39,
+        '40' => 44,
+        '45' => 49,
+        '50' => 54,
+        '55' => 59,
+        '60' => 64,
+        '65' => 69,
+        '70' => 99  
+    );
 
     public function __construct(Edad $Edad)
     {
@@ -20,65 +34,14 @@ class RangoDeEdad
     private function setRangoDeEdad(int $edad): string
     {
         $rango = '';
-        
-        if($edad >= 15 && $edad <= 19)
-        {
-            $rango = "15-19";
-        }
 
-        if($edad >= 20 && $edad <= 24)
+        foreach($this->_rangos as $k => $r)
         {
-            $rango = "20-24";
-        }
-
-        if($edad >= 25 && $edad <= 29)
-        {
-            $rango = "25-29";
-        }
-
-        if($edad >= 30 && $edad <= 34)
-        {
-            $rango = "30-34";
-        }
-
-        if($edad >= 35 && $edad <= 39)
-        {
-            $rango = "35-39";
-        }
-
-        if($edad >= 40 && $edad <= 44)
-        {
-            $rango = "40-44";
-        }
-
-        if($edad >= 45 && $edad <= 49)
-        {
-            $rango = "45-49";
-        }
-
-        if($edad >= 50 && $edad <= 54)
-        {
-            $rango = "50-54";
-        }
-
-        if($edad >= 55 && $edad <= 59)
-        {
-            $rango = "55-59";
-        }
-
-        if($edad >= 60 && $edad <= 64)
-        {
-            $rango = "60-64";
-        }
-
-        if($edad >= 65 && $edad <= 69)
-        {
-            $rango = "65-69";
-        }
-
-        if($edad >= 70 && $edad <= 99)
-        {
-            $rango = "70-99";
+            
+            if($edad >= $k && $edad <= $r)
+            {
+                $rango = "$k-$r";
+            }
         }
 
         return $rango;  
