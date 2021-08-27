@@ -6,6 +6,16 @@ use Exception;
 class RangoTiempoEnPuesto
 {
     private string $_rangoTiempoEnPuesto;
+    private $_niveles = array(
+        'Menos de 6 meses', 
+        'Entre 6 meses y 1 año',
+        'Entre 1 a 4 años', 
+        'Entre 5 a 9 años',
+        'Entre 10 a 14 años', 
+        'Entre 15 a 19 años',
+        'Entre 20 a 24 años', 
+        '25 años o más'
+    );
 
     public function __construct(string $rangoTiempoEnPuesto)
     {
@@ -19,16 +29,7 @@ class RangoTiempoEnPuesto
 
     private function setRangoTiempoEnPuesto(string $rangoTiempoEnPuesto): string
     {
-        if(
-           $rangoTiempoEnPuesto == 'Menos de 6 meses' || 
-           $rangoTiempoEnPuesto == 'Entre 6 meses y 1 año' ||
-           $rangoTiempoEnPuesto == 'Entre 1 a 4 años' || 
-           $rangoTiempoEnPuesto == 'Entre 5 a 9 años' ||
-           $rangoTiempoEnPuesto == 'Entre 10 a 14 años' || 
-           $rangoTiempoEnPuesto == 'Entre 15 a 19 años' ||
-           $rangoTiempoEnPuesto == 'Entre 20 a 24 años' || 
-           $rangoTiempoEnPuesto == '25 años o más'
-        )
+        if(in_array($rangoTiempoEnPuesto,$this->_niveles))
         {
             return $rangoTiempoEnPuesto;
         }

@@ -6,6 +6,17 @@ use Exception;
 class NivelDeEstudios
 {
     private string $_nivelDeEstudios;
+    
+    private $_niveles = array(
+        'Sin información', 
+        'Primaria',
+        'Secundaria', 
+        'Bachillerato',
+        'Técnico superior',
+        'Licenciatura',
+        'Maestría',
+        'Doctorado'
+    );
 
     public function __construct(string $nivelDeEstudios)
     {
@@ -19,20 +30,11 @@ class NivelDeEstudios
 
     private function setNivelDeEstudios(string $nivelDeEstudios): string
     {
-        if(
-            $nivelDeEstudios == 'Sin información' || 
-            $nivelDeEstudios == 'Primaria' ||
-            $nivelDeEstudios == 'Secundaria' || 
-            $nivelDeEstudios == 'Bachillerato' ||
-            $nivelDeEstudios == 'Técnico superior' ||
-            $nivelDeEstudios == 'Licenciatura' ||
-            $nivelDeEstudios == 'Maestría' ||
-            $nivelDeEstudios == 'Doctorado'
-        )
+        if(in_array($nivelDeEstudios,$this->_niveles))
         {
             return $nivelDeEstudios;
         }
 
-        throw new Exception("Error en Nivel de Estudios", 1);  
+        throw new Exception("Error en Nivel de Estudios");  
     }
 }
